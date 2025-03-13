@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Navrang | </title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header_wrapper wrapper">
+      <div class="header_left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 62" width="122" height="62" fill="#008000">
+          <!-- Rectangle Outline -->
+          <rect x="5" y="5" width="112" height="52" fill="none" stroke="#008000" stroke-width="4" />
+          <!-- Filled Rectangle -->
+          <rect x="10" y="10" width="100" height="40" fill="#008000" />
+          <!-- Text -->
+          <text x="60" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle"
+            fill="#DAA520" data-translate="Navrang">Navrang</text>
+        </svg>
+        <ul class="header_left_list">
+          <li class="header_left_list_item">
+            <a href="index3.html">
+              <button class="btn_secondary" data-translate="Find Product">Find Product</button>
+            </a>
+          </li>
+          <li class="header_left_list_item">
+            <a href="index4.html">
+              <button class="btn_secondary" data-translate="Find Worker">Find Worker</button>
+            </a>
+          </li>
+          <li class="header_left_list_item">
+            <select id="languageSelector" onchange="changeLanguage(this.value)">
+              <option value="en" data-translate="English">English</option>
+              <option value="hi" data-translate="Hindi">Hindi</option>
+            </select>
+            <img src="./assets/dropdown.svg" alt="" />
+          </li>
+          <li class="header_left_list_item" data-translate="As a Seller">As a Seller</li>
+          <li class="item-postad"></li>
+        </ul>
+      </div>
+      <div class="header_right">
+        <div class="header_right_form">
+          <input type="search" placeholder="Search" name="search" id="" />
+          <div class="header_right_form_input_icons">
+            <img src="./assets/search.svg" alt="" />
+            <img src="./assets/dropdown.svg" alt="" />
+          </div>
+        </div>
+        <div class="header_right_btns">
+          <a href="page.html">
+            <button class="btn_primary" data-translate="Log In">Log In</button>
+          </a>
+          <a href="sign.html">
+            <button class="btn_secondary" data-translate="Sign Up">Sign Up</button>
+          </a>
+          <button class="color00" style="background-color: rgb(192, 217, 79); color: rgb(0, 0, 0);"
+            type="button" data-translate="POST AN AD">POST AN AD</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section_1 wrapper"> 
+      
+  </div>
+
+  <div class="sectin_1_bottom">
+    <div class="section_1_bottom_left">
+      <h1 class="title-1" style="color:#DAA520" data-translate="Fostering Local Excellence">
+        Fostering Local <br />
+        Excellence 
+      </h1>
+      <h3 class="title-3" data-translate="Forget the old rules. You can have the best people. Right now. Right here.">
+        Forget the old rules. You can have the best people.<br />
+        Right now. Right here.
+      </h3>
+      <div class="section_1_bottom_left_btns">
+        <!-- <a href="sign.html">
+          <button  class="btn_secondary">Get Started</button>
+        </a> -->
+      </div>
+      <div class="section_1_bottom_left_companies_logo">
+        <h4 class="title-4" data-translate=""></h4>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="section_1_bottom_right">
+      <img src="./assets/image-1.jpg" alt="" style="width: 580px; height: 350px;"/>
+    </div>
+  </div>
+
+  <div class="animation_section">
+    <video autoplay loop muted>
+      <source src="assets/section.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <br>
+    <br>
+    <br>
+    <h3 data-translate="Elevate your work game, with ease">Elevate your work game, with ease</h3>
+    <div class="content-fonts">
+      <h4>
+        <br>
+        <i class='bx bx-edit'  ></i>
+        <span data-translate="No cost to join">No cost to join</span>
+      </h4>
+      <p data-translate="Register and browse products, explore services , or even book participation in an event">Register and browse products, explore services , or even book participation in an event</p>
+    </div>
+
+    <div class="content-fonts">
+      <h4>
+        <i class='bx bx-pin' ></i>
+        <span data-translate="Unlock the Power of Local Selling">Unlock the Power of Local Selling</span>
+      </h4>
+      <p data-translate="Say goodbye to the complexities of reaching your audience. Post your products effortlessly or allow us to assist you in getting your business in front of interested buyers.">Say goodbye to the complexities of reaching your audience. Post your products effortlessly or allow us to assist you in getting your business in front of interested buyers.</p>
+    </div>
+
+    <div class="content-fonts">
+      <h4>
+        <i class='bx bxs-star'></i>
+        <span data-translate="Quality Work, Affordable Rates">Quality Work, Affordable Rates</span>
+      </h4>
+      <p data-translate="Navrang makes it affordable to up your work and take advantage of low transaction rates.">Navrang makes it affordable to up your work and take advantage of low transaction rates.</p>
+    </div>
+
+   
+
+  </div>
+  
+  </div>
+
+</section>
+
+
+<section class="section_2 wrapper">
+  <div class="section_2_header">
+    <h3 data-translate="Upcoming Events">Upcoming Events</h3>
+    <div>
+
+      <a href="#" data-translate="Explore"> Explore</a>
+    </div>
+  </div>
+
+      <div class="section_2_categories">
+        <a href="https://haryanatourism.gov.in/Events/surajkund-international-crafts-mela-faridabad">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">SurajKund Handicraft Fair</h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.indiatradefair.com/">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">TradeFair </h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://ihgfdelhifair.in/">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">Indian Handicrafts and gift Fair</h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://indian.handicrafts.gov.in/en/events/view/ODQ%3D">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">Handicraft Mela Delhi Haat</h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://www.nhdc.org.in/internal.aspx?menuid=2&CatID=136">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">Handloom Haat </h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://www.ibef.org/experience-india/buyer-seller-meet">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">Buyer Seller meet</h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://itsfair.in/">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">Indian Textile Sourcing Fair</h4>
+            <div>
+              
+            </div>
+          </div>
+        </a>
+        <a href="https://hghindia.com/">
+          <div class="section_2_categories_tile" style="background-color: rgb(226, 190, 99);">
+            <br>
+            <h4 style="text-align: center;">HGH India</h4>
+            <div>
+              <span>
+                
+            </div>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+
+    <section class="section_3 wrapper">
+      <div class="section_3_left">
+        <div class="section_3_left_header">
+          <h3 data-translate="Enterprise Suite">Enterprise Suite</h3>
+          <h1 data-translate="ABOUT US">
+            ABOUT US
+          </h1>
+          <span data-translate="Welcome to Navrang , a vibrant online marketplace where creativity meets community!      
+            Navrang is not just a website; it's a platform that  that unites artisans, craftsmen,     
+            and handymen, showcasing their diverse and unique creations all in one space.           
+            <br />business goals.">
+            
+          </span>
+        </div>
+
+        <div class="section_3_left_details">
+          <div>
+            <img src="./assets/Skills.svg" alt="skills" />
+            <p data-translate="Access expert talent to fill your skill gaps">Access expert talent to fill your skill gaps</p>
+          </div>
+          <div>
+            <img src="./assets/Briefcase.svg" alt="briefcase" />
+            <p data-translate="Control your workflow: hire, classify and pay your talent">Control your workflow: hire, classify and pay your talent</p>
+          </div>
+          <div>
+            <img src="./assets/Support.svg" alt="support" />
+            <p data-translate="Partner with Upwork for end-to-end support">Partner with NavRang for end-to-end support</p>
+          </div>
+        </div>
+        <div class="section_left_btn">
+          <a href="contact.html">
+            <button class="btn_primary" data-translate="Contact Us">Contact Us</button>
+          </a>
+        </div>
+      </div>
+      <div class="section_3_right">
+        <img src="./assets/enterprise.png" alt="enterprise" />
+      </div>
+    </section>
+
+
+    <section class="section_5 wrapper">
+      <div class="section_5_left">
+        <div class="section_5_left_info">
+          <h1 class="section_5_left_info_title" data-translate="Why Choose us">Why Choose us <br /></h1>
+
+          <div class="section_5_left_info_item">
+            <div class="section_5_left_info_item_left">
+              <img src="./assets/star-circle.svg" alt="" />
+            </div>
+            <div class="section_5_left_info_item_right">
+              <h3 data-translate="Connect Directly with Local Talent :">Connect Directly with Local Talent :</h3>
+              <p data-translate="Connect directly with skilled artisans and handymen, bypassing middlemen, for personalized services, customization">
+                Connect directly with skilled artisans and handymen,<br /> bypassing middlemen, for personalized services, customization
+              </p>
+            </div>
+          </div>
+          <div class="section_5_left_info_item">
+            <div class="section_5_left_info_item_left">
+              <img src="./assets/doller-circle.svg" alt="" />
+            </div>
+            <div class="section_5_left_info_item_right">
+              <h3 data-translate="Experience wide range  of product and opportunities">Experience wide range  of product and opportunities</h3>
+              <p data-translate="Explore a vast array of products and endless opportunities, providing a diverse and enriching experience for all">
+                Explore a vast array of products and endless opportunities, <br /> providing a diverse and enriching experience for all
+              </p>
+            </div>
+          </div>
+          <div class="section_5_left_info_item">
+            <div class="section_5_left_info_item_left">
+              <img src="./assets/check-circle.svg" alt="" />
+            </div>
+
+            <div class="section_5_left_info_item_right">
+              <h3 data-translate="Language Friendly Platform">Language Friendly Platform</h3>
+              <p data-translate="Any person can interact with this platform without any language barrier">
+                Any person can interact with this platform without any language barrier
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="section_5_left_img">
+          
+          
+        </div>
+      </div>
+      <div class="section_5_right">
+        <div class="section_5_right_info">
+          <div class="section_5_right_info_item">
+            <div>
+              
+            </div>
+          </div>
+          <div class="section_5_right_info_item">
+            
+            <div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="section_7 wrapper">
+      <h1 data-translate="SERVICES WE PROVIDE">SERVICES WE PROVIDE <br /></h1>
+</section>
+
+      <div class="section_7_container">
+        <div
+          onclick="onClickLeft()"
+          class="section_7_reviews_list_controls_left"
+        >
+          <img src="./assets/arrow-right.svg" alt="" />
+        </div>
+        <div
+          onclick="onClickRight()"
+          class="section_7_reviews_list_controls_right"
+        >
+          <img src="./assets/arrow-right.svg" alt="" />
+        </div>
+        <div class="section_7_reviews_carousel">
+          <div class="section_7_reviews_list">
+            <div class="section_7_reviews_list_box_1">
+              <div class="section_7_reviews_list_item item_1">
+                <div class="section_7_reviews_list_item_top">
+
+                  <img src="tote.jpg" alt="" style="width: 300px; height: 300px;" />
+                </br>
+              </br>
+            </br>
+          </br>
+
+                  <h4 style="text-align: center;"> "FUSION BAGS"
+                  </h4>
+                </div>
+                <div class="section_7_reviews_list_item_bottom">
+                  <hr />
+                  <div class="section_7_reviews_list_item_bottom_results">
+                    <div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_7_reviews_list_item item_2">
+                <div class="section_7_reviews_list_item_top">
+                  <img src="decoration.jpg" alt="" style="width: 300px; height: 300px;" /> 
+                </br>
+              </br>
+            </br>
+                  
+                </div>
+                <div class="section_7_reviews_list_item_bottom">
+                  
+                  
+                  <div class="section_7_reviews_list_item_bottom_results">
+                    <div>
+                        <h4 style="text-align: center;">DECORATION </h4>
+                       <hr />
+                      
+                    </div>
+                    <div>
+                      <!-- <h4>10,000</h4> -->
+                      <!-- <p>projects completed</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section_7_reviews_list_box_2">
+              <div class="section_7_reviews_list_item item_3">
+                <div class="section_7_reviews_list_item_top">
+                  <img src="services.jpg" alt="" style="width: 350px; height: 300px;"/> 
+                  <h4 style="text-align: center;">
+                    SERVICES
+                  </h4>
+                  <!-- <h2> Priortize your pet's health with our local veterinary services, offering essental vaccines and medical care to keep your furry friends happy and thriving. </h2> -->
+                  <!-- <p>Anthony Massarweh, Program Manager</p> -->
+                </div>
+
+                <div class="section_7_reviews_list_item_bottom">
+                  <!-- <h5>Results</h5> -->
+                  <hr />
+                  <div class="section_7_reviews_list_item_bottom_results">
+                    <div>
+                      <!-- <h4>72-Hour</h4> -->
+                      <!-- <p>average turnaround on websites</p> -->
+                    </div>
+                    <div>
+                      <!-- <h4>3x Faster</h4> -->
+                      <!-- <p>launch of new program</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section_7_reviews_list_item item_4">
+                <div class="section_7_reviews_list_item_left">
+                  <img src="./assets/company-logos-cover.jpg" alt="" />
+                </div>
+                <div class="section_7_reviews_list_item_right">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="./js/script.js"></script>
+  </br>
+ 
+<script>
+  // Translation data
+const translations = {
+    "Navrang": {
+        "en": "Navrang",
+        "hi": "नवरंग"
+    },
+    "Find Product": {
+        "en": "Find Product",
+        "hi": "उत्पाद खोजें"
+    },
+    "Find Worker": {
+        "en": "Find Worker",
+        "hi": "कामगार खोजें"
+    },
+    "English": {
+        "en": "English",
+        "hi": "अंग्रेज़ी"
+    },
+    "Hindi": {
+        "en": "Hindi",
+        "hi": "हिंदी"
+    },
+    "As a Seller": {
+        "en": "As a Seller",
+        "hi": "एक विक्रेता के रूप में"
+    },
+    "Search": {
+        "en": "Search",
+        "hi": "खोजें"
+    },
+    "Log In": {
+        "en": "Log In",
+        "hi": "लॉग इन करें"
+    },
+    "Sign Up": {
+        "en": "Sign Up",
+        "hi": "साइन अप करें"
+    },
+    "POST AN AD": {
+        "en": "POST AN AD",
+        "hi": "विज्ञापन पोस्ट करें"
+    },
+    "Fostering Local Excellence": {
+        "en": "Fostering Local <br /> Excellence",
+        "hi": "स्थानीय उत्कृष्टता   को <br/>  प्रोत्साहित करना"
+    },
+    "Forget the old rules. You can have the best people. Right now. Right here.": {
+        "en": "Forget the old rules. You can have the best people. Right now. Right here.",
+        "hi": "पुराने नियमों को भूल जाओ। आपके पास सर्वश्रेष्ठ लोग हैं। "
+    },
+    "Elevate your work game, with ease": {
+        "en": "Elevate your work game, with ease",
+        "hi": "आसानी से अपने काम गेम को ऊपर ले जाएं"
+    },
+    "No cost to join": {
+        "en": "No cost to join",
+        "hi": "शामिल होने के लिए कोई लागत नहीं है"
+    },
+    "Unlock the Power of Local Selling": {
+        "en": "Unlock the Power of Local Selling",
+        "hi": "स्थानीय बिक्री की शक्ति को अनलॉक करें"
+    },
+    "Say goodbye to the complexities of reaching your audience. Post your products effortlessly or allow us to assist you in getting your business in front of interested buyers.": {
+        "en": "Say goodbye to the complexities of reaching your audience. Post your products effortlessly or allow us to assist you in getting your business in front of interested buyers.",
+        "hi": "अपने दर्शकों तक पहुँचने की जटिलताओं को अलविदा कहें। अपने उत्पादों को आसानी से पोस्ट करें या हमें आपकी व्यावसायिक आगंतुकों के सामने आने में आपकी सहायता करने दें।"
+    },
+    "Quality Work, Affordable Rates": {
+        "en": "Quality Work, Affordable Rates",
+        "hi": "गुणवत्ता काम, सस्ते दर"
+    },
+    "Navrang makes it affordable to up your work and take advantage of low transaction rates.": {
+        "en": "Navrang makes it affordable to up your work and take advantage of low transaction rates.",
+        "hi": "नवरंग इसे आपके काम को सस्ता बनाता है और कम लेन-देन दरों का लाभ उठाता है।"
+    },
+    "Handicraft Mela Delhi Haat": {
+        "en": "Handicraft Mela Delhi Haat",
+        "hi": "हस्तशिल्प मेला दिल्ली हाट"
+    },
+    "Why Choose us": {
+        "en": "Why Choose us",
+        "hi": "हमें क्यों चुनें"
+    },
+    "Connect Directly with Local Talent :": {
+        "en": "Connect Directly with Local Talent :",
+        "hi": "स्थानीय प्रतिभा के साथ सीधे कनेक्ट करें :"
+    },
+    "Upcoming Events": {
+    "en": "Upcoming Events",
+    "hi": "आगामी घटनाएँ"
+  },
+  "Explore": {
+    "en": "Explore",
+    "hi": "अन्वेषण करें"
+    
+  },
+  
+  "Why Choose us": {
+    "en": "Why Choose us",
+    "hi": "हमें क्यों चुनें"
+  },
+  "Connect Directly with Local Talent :": {
+    "en": "Connect Directly with Local Talent :",
+    "hi": "स्थानीय प्रतिभा के साथ सीधे कनेक्ट करें :"
+  },
+  "Connect directly with skilled artisans and handymen, bypassing middlemen, for personalized services, customization": {
+    "en": "Connect directly with skilled artisans and handymen, bypassing middlemen, for personalized services, customization",
+    "hi": "व्यक्तिगत सेवाएं, कस्टमाइजेशन के लिए मध्यमिकों को छोड़कर कुशल कारीगरों और मजदूरों से सीधे कनेक्ट करें"
+  },
+  "Experience wide range  of product and opportunities": {
+    "en": "Experience wide range  of product and opportunities",
+    "hi": "उत्पाद और अवसरों का व्यापक विवरण अनुभव करें"
+  },
+  "Explore a vast array of products and endless opportunities, providing a diverse and enriching experience for all": {
+    "en": "Explore a vast array of products and endless opportunities, providing a diverse and enriching experience for all",
+    "hi": "सभी के लिए विविध और अर्थपूर्ण अनुभव प्रदान करते हुए विभिन्न और संतोषजनक अवसरों का व्यापक विवरण अनुसंधान करें"
+  },
+  "Language Friendly Platform": {
+    "en": "Language Friendly Platform",
+    "hi": "भाषा मित्रपूर्ण प्लेटफ़ॉर्म"
+  },
+  "Any person can interact with this platform without any language barrier": {
+    "en": "Any person can interact with this platform without any language barrier",
+    "hi": "कोई भी व्यक्ति इस प्लेटफ़ॉर्म के साथ किसी भी भाषा की बाधा के बिना संवाद कर सकता है"
+  },
+  
+  "SERVICES WE PROVIDE": {
+    "en": "SERVICES WE PROVIDE",
+    "hi": "हमारी सेवाएं"
+  },
+  
+  "Enterprise Suite": {
+    "en": "Enterprise Suite",
+    "hi": "एंटरप्राइज सुइट"
+  }
+};
+
+    function translateElements(language) {
+      const elements =document.querySelectorAll('[data-translate]');
+      elements.forEach(element => {
+        const key = element.dataset.translate;
+        if (translations[key] && translations[key][language]) {
+          element.textContent = translations[key][language];
+        }
+      });
+    }
+
+    // Function to change language
+    function changeLanguage(language) {
+      translateElements(language);
+    }
+
+    // Initial translation when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      // Assuming 'en' is the default language
+      translateElements('en');
+    });
+  </script>
+  </script>
+    
+        
+
+  
+  
+  
+</br>
+</br>
+</br>
+  </body>
+</html>
